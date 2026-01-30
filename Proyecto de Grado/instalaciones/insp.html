@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inspección General</title>
+    <link rel="stylesheet" type="text/css" href="galeria.css">
+    <link rel="icon" href="mi-icono.png" type="image/png">
+<style>
+
+    .btn-volver{
+        background: linear-gradient(135deg, #0a1f44, #163a70);
+        color: white;
+        border: none;
+        padding: 12px 28px;
+        font-size: 16px;
+        border-radius: 30px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 8px 20px rgba(10, 31, 68, 0.4);
+        transition: all 0.3s ease;
+    }
+
+    .btn-volver:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 12px 25px rgba(10, 31, 68, 0.6);
+        background: linear-gradient(135deg, #163a70, #0a1f44);
+    }
+
+    .btn-volver:active{
+        transform: scale(0.95);
+    }
+
+    .icono{
+        font-size: 18px;
+    }
+</style>
+</head>
+<body>
+<button class="btn-volver" onclick="retroceder()">
+    <span class="icono">⬅</span>
+    Volver
+</button>
+<h1>INSPECCIÓN GENERAL </h1>
+
+<div class="galeria">
+    <img src="img/inps1.jpeg" onclick="abrirModal(this.src)">
+    <img src="img/inps2.jpeg" onclick="abrirModal(this.src)">
+    <img src="img/inps3.jpeg" onclick="abrirModal(this.src)">
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    <img id="imagenGrande">
+</div>
+     <script src="script.js"></script> 
+     <script>
+    function retroceder(){
+        window.history.back();
+    }
+</script>
+</body>
+</html>

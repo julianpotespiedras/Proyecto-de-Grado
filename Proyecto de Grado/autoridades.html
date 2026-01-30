@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unidad Educativa Profesor Kleber Franco Cruz</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="logo.css">
+    <link rel="icon" href="mi-icono.png" type="image/png">
+        <style>
+        h1 {
+            text-align: center;
+            padding: 25px 10px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .tree {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 50px;
+        }
+
+        .tree ul {
+            padding-top: 20px;
+            position: relative;
+        }
+
+        .tree li {
+            list-style-type: none;
+            text-align: center;
+            position: relative;
+            padding: 20px 10px 0 10px;
+            display: inline-block;
+        }
+
+        /* Líneas */
+        .tree li::before, .tree li::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            width: 50%;
+            height: 20px;
+            border-top: 2px solid rgba(255,255,255,0.4);
+        }
+
+        .tree li::after {
+            right: auto;
+            left: 50%;
+            border-left: 2px solid rgba(255,255,255,0.4);
+        }
+
+        .tree li:only-child::before,
+        .tree li:only-child::after {
+            display: none;
+        }
+
+        .tree li:first-child::before { border: 0; }
+        .tree li:last-child::after { border: 0; }
+
+        .tree ul ul::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border-left: 2px solid rgba(255,255,255,0.4);
+            height: 20px;
+        }
+
+        /* Tarjetas */
+        .card {
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(8px);
+            border-radius: 15px;
+            padding: 15px 10px;
+            min-width: 160px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.5);
+        }
+
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-dashed: 50%;
+            object-fit: cover;
+            border: 3px solid #1f3c88;
+            margin-bottom: 8px;
+        }
+
+        .name {
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .role {
+            font-size: 13px;
+            opacity: 0.85;
+            margin-top: 2px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .tree li {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">Más 👉
+ <a href="https://www.facebook.com/colegiokleberfrancocruz/mentions/" 
+   target="_blank" 
+   class="facebook-icon">
+    f
+</a>
+</div>
+    <div class="nav">
+        <img src="multimedia/logo.jpg" alt=" Logo">
+        <h2 class="titulo">Unidad Educativa Profesor<br>
+         Kleber franco Cruz</h2>
+
+        <div class="menup">
+            <a href="index.html">INICIO</a>
+
+            <div class="dropdown">
+                <a href="#">COLEGIO ▾</a>
+                <div class="dropdown-content">
+                    <a href="autoridades.html">Autoridades</a>
+                    <a href="historia.html">Historia</a>
+                    <a href="mision.html">Misión y Visión</a>
+                    <a href="himno.html">Himno del Colegio</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#">ESPECIALIDADES ▾</a>
+                <div class="dropdown-content">
+                    <a href="ciencias.html">CIENCIAS</a>
+                    <a href="informatica.html">INFORMÁTICA</a>
+                    <a href="contabilidad.html">CONTABILIDAD</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#">INSTALACIONES ▾</a>
+                <div class="dropdown-content">
+                    <a href="instalaciones/labcom.html">Laboratorios de Computo</a>
+                    <a href="instalaciones/labquim.html">Laboratorio de Química</a>
+                    <a href="instalaciones/canchas.html">Canchas de Futbol</a>
+                    <a href="instalaciones/parques.html">Parques</a>
+                    <a href="instalaciones/vicerrectorado.html">Vicerrectorado</a>
+                    <a href="instalaciones/secretaria.html">Secretaria</a>
+                    <a href="instalaciones/insp.html">Inspección General</a>
+                    <a href="instalaciones/dece.html">Departamento de Consejeria Estudiantil(DECE)</a>
+                </div>
+            </div>
+            <a href="ubicacion.html">UBICACIÓN</a>
+        </div>
+    </div>
+
+    <div class="slider-box">
+   <center> <h2>Autoridades – Unidad Educativa Profesor “Kleber<br> Franco Cruz”</h2></center>
+</div>
+<div class="tree">
+    <ul>
+        <li>
+            <div class="card">
+                <img src="Multimedia/rector.jpg" alt="Rector">
+                <div class="name">Abg. Ruben Romero Laines</div>
+                <div class="role">Rector</div>
+            </div>
+            <ul>
+                <li>
+                    <div class="card">
+                        <img src="Multimedia/vice.jpg" alt="Vicerrector">
+                        <div class="name">Mgs. Miriam Macas</div>
+                        <div class="role">Vicerrectora</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                        <img src="Multimedia/inspege.jpg" alt="Inspector general">
+                        <div class="name">Ing. Jhonny Rueda</div>
+                        <div class="role">Inspector General</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                        <img src="Multimedia/insp.jpg" alt="Inspector">
+                        <div class="name">Ing. Luis Jimbo</div>
+                        <div class="role">Inspector</div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
